@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:Verdana, sans-serif;
+    background-position: center;
+    box-sizing: border-box;
+
+}
+.container{
+    width: 100%;
+    /* height: 100vh; */
+    min-height:100vh;
+    /* background: linear-gradient(145deg,#7f178d ,#262626); */
+    background-image: url(background.jpg);
+    background-size: cover;
+    padding: 10px;
+}
+.todo-app{
+    width: 100%;
+    max-width: 540px;
+    background:#ffffffe1;
+    padding: 25px;
+    border-radius: 10px;
+    margin: 100px auto 30px;
+    padding: 40px 30px 70px;
+
+
+}
+.todo-app h2{
+    color: #2d2c2cf0;
+    font-size: 30px;
+    position: relative;
+}
+img{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: -5px;
+    left:180px ;
+}
+
+.search-field{
+    margin-top: 30px;
+    background: #e4d5d5;
+    padding-left: 10px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+
+}
+.search-field input{
+    flex: 1;
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px 0 10px 5px;
+    font-size: 16px;
+
+}
+.search-field button{
+    width:100px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    background:rgba(255, 68, 0,7.45);
+    border-radius: 30px;
+    font-size: 17px;
+    color: #ffff;
+    cursor: pointer;
+
+}
+ul li{
+    list-style: none;
+    font-size: 18px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    position: relative;
+    cursor: pointer;
+}
+ul li::before{
+    content:'';
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background-image: url(unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top:12px;
+    left:8px;
+
+}
+ul li.checked{
+    color: rgba(255, 68, 0, 0.948);
+    text-decoration:line-through;
+}
+
+ul li.checked::before{
+    background-image: url(checked.png);
+
+}
+ul li span{
+    position:absolute;
+    right:0px;
+    top:2px;
+    width:40px;
+    height:40px;
+    font-size:22px;
+    color: #555;
+    line-height:40px;
+    text-align:center;
+    border-radius:50%;
+    cursor:pointer;
+}
+
+ul li span:hover{
+    background:#e4d5d5;
+}
+
+
+@media (max-width:500px){
+    ul li{
+        font-size: 16px;
+    }
+    ul li span{
+        top:0px;
+    }
+    ul li::before{
+        height: 20px;
+        width: 20px;
+    
+    }
+    .search-field input{
+        font-size: 14px;
+    }
+}
